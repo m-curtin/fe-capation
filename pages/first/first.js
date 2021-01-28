@@ -85,6 +85,23 @@ Page({
         desc: '加盟回收'
       },
     ],
+    backProductList: [
+      {
+        img: '/assets/first/back/back1.png',
+        desc: '液晶电视32寸',
+        price: '￥200'
+      },
+      {
+        img: '/assets/first/back/back2.png',
+        desc: '电脑主机',
+        price: '￥200~500'
+      },
+      {
+        img: '/assets/first/back/back3.png',
+        desc: '笔记本',
+        price: '￥200~1000'
+      }
+    ],
     indicatorDots: true,
     vertical: false,
     autoplay: true,

@@ -55,13 +55,20 @@
     <view class="doSthDesc-body">
       手机平板笔记本电脑主机路由器户户通机子村村通机子EVD智能手表智能音箱智能摄像头键盘鼠标显示屏液晶电视冰箱冰柜洗衣机空调碟机打印机复印机录音机电话座机电动车充电器控制器空开变频器碟片CT片子医疗设备身份证阅读器电表气表交换机服务器各种电路板芯片板子工厂公司机构政府单位废料积压物品商家合作二手精选好用实惠。
     </view>
+    <view class="doSthDesc-body">
+      电子家电通讯配件原器件：
+    </view>
+    <view class="doSthDesc-body">
+      手机、电脑、笔记本、液晶电视、冰箱、洗衣机、空调、录像机、投影仪、广告机、交换机服务器等多种电子家电通讯配件原器件。
+    </view>
   </view>
 
   <view class="has-perfect-sth">
     <view class="has-perfect-title">兑换优品</view>
     <image src="/assets/first/product1.png" class="product1"></image>
     <view style="width: 346rpx;height: 320rpx;float: right; display:inline;">
-      <image src="/assets/first/product2.png" class="product2"></image><image src="/assets/first/product3.png" class="product3"></image>
+      <image src="/assets/first/product2.png" class="product2"></image>
+      <image src="/assets/first/product3.png" class="product3"></image>
     </view>
     <image src="/assets/first/product4.png" class="product4"></image>
     <image src="/assets/first/product5.png" class="product5"></image>
@@ -69,9 +76,36 @@
 
   <view class="bussiness-partner">
     <view class="title">商家合作</view>
+    <view class="partner-container">
+      <view class="product1-container">
+        <image src="/assets/first/partner/part1.png" class="product1"></image>
+        <view>
+          <view class="product1-title">加盟回收合作</view>
+          <view class="product1-body">废品站和骑三轮车客户长期稳定上门回收价格优势现金交易</view>
+        </view>
+      </view>
+      <view class="product1-container" style="margin-left: 23rpx;">
+        <image src="/assets/first/partner/part2.png" class="product1"></image>
+        <view class="product1-title" style="color: #806848;">代理赚取佣金</view>
+        <view class="product1-body" style="color: #806848;">代理合作获取用户订单公司上门回收根据成交额提取佣金</view>
+      </view>
+    </view>
   </view>
 
   <view class="back-product">
-    <view class="title">回收产品</view>
+    <view class="title">回收产品 二手产品</view>
+    <view wx:for="{{backProductList}}" style="display: inline-block; width: 336rpx;height: 422rpx;">
+      <view class="tab-top">
+        <image class="tab-icon" src="{{item.img}}"></image>
+        <view class="tab-icon-desc">{{item.desc}}</view>
+        <view class="back-price">
+          <view class="name">回收价</view>
+          <view class="price">{{item.price}}</view>
+        </view>
+        <button>立即联系</button>
+      </view>
+    </view>
+    <image style="display: inline-block; width: 336rpx;height: 422rpx;position: relative;margin-bottom: -110px;"
+      src="/assets/first/back/back4.png"></image>
   </view>
 </view>
