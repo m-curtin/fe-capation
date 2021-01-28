@@ -1,0 +1,194 @@
+page {
+  background-color: #F7F7F7;
+  width: 100%;
+  height: 100%;
+}
+
+.container-first {
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+.swiper-container {
+  display: inline-block;
+  width: 702rpx;
+  height: 272rpx;
+}
+
+.swiper-img {
+  width: 702rpx;
+  height: 272rpx;
+}
+
+.swiper-bottom-container {
+  display: inline-block;
+}
+
+.swiper-bottom {
+  display: flex;
+  align-items: center;
+  margin-right: 36rpx;
+  margin-bottom: 22rpx;
+  color: #4A4A4A;
+}
+
+.swiper-bottom .swiper-icon {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.swiper-bottom .swiper-icon-desc {
+  margin-left: 10rpx;
+  font-size: 23rpx;
+}
+
+
+.tab-top-container {
+  margin-top: 50rpx;
+  display: inline-block;
+}
+
+.tab-top {
+  width: 126rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 5rpx;
+  margin-right: 12rpx;
+  margin-bottom: 22rpx;
+  color: #4A4A4A;
+}
+
+.tab-top .tab-icon {
+  width: 86rpx;
+  height: 86rpx;
+  margin-bottom: 24rpx;
+}
+
+.tab-top .tab-icon-desc {
+  color: #333333;
+  font-size: 19rpx;
+}
+
+.tab-top-swiper .wx-swiper-dot {
+  width: 44rpx;
+  height: 6rpx;
+  content: '';
+  margin: 0;
+  margin-left: -15rpx;
+  border-radius: 0;
+}
+
+.doSthDesc {
+  display: inline-block;
+  width: 702rpx;
+  margin: 0 52rpx;
+  height: 380rpx;
+}
+
+.doSthDesc .doSthDesc-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.doSthDesc .doSthDesc-title .doSthDesc-title-img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.doSthDesc-title-text {
+  margin-left: 23rpx;
+}
+
+.doSthDesc-title-text .top {
+  font-size: 41rpx;
+  font-weight: 500;
+}
+
+.doSthDesc-title-text .bottom {
+  font-size: 33rpx;
+  font-weight: 500;
+}
+
+.doSthDesc .doSthDesc-title .doSthDesc-title-text {
+  text-align: left;
+}
+
+.doSthDesc-body {
+  margin-top: 33rpx;
+  font-size: 24rpx;
+  width: 646rpx;
+  text-align: left;
+  height: 183rpx;
+  color: #999;
+}
+
+
+.has-perfect-sth {
+  display: inline-block;
+  width: 702rpx;
+  height: 380rpx;
+}
+
+.has-perfect-sth .has-perfect-title {
+  font-size: 36rpx;
+  text-align: left;
+  font-weight: 500;
+}
+
+.has-perfect-sth .product1 {
+  width: 356rpx;
+  height: 320rpx;
+}
+
+.has-perfect-sth .product2 {
+  margin-left: 4rpx;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  width: 346rpx;
+  height: 158rpx;
+}
+
+.has-perfect-sth .product3 {
+  margin-left: 4rpx;
+  margin-top: -4px;
+  padding: 0;
+  margin-bottom: 0;
+  width: 346rpx;
+  height: 158rpx;
+}
+
+.has-perfect-sth .product4 {
+  width: 702rpx;
+  height: 206rpx;
+}
+
+.has-perfect-sth .product5 {
+  width: 658rpx;
+  height: 144rpx;
+}
+
+.bussiness-partner {
+  display: inline-block;
+  width: 702rpx;
+  height: 380rpx;
+}
+
+.bussiness-partner .title {
+  font-size: 36rpx;
+  text-align: left;
+  font-weight: 500;
+}
+
+.back-product {
+  display: inline-block;
+  width: 702rpx;
+  height: 380rpx;
+}
+
+.back-product .title {
+  font-size: 36rpx;
+  text-align: left;
+  font-weight: 500;
+}

@@ -5,7 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    promiseList: [{
+      iconUrl: "/assets/icons/promise/anquan.png",
+      title: "安全问题",
+      body: "安全可靠"
+    },
+    {
+      iconUrl: "/assets/icons/promise/huishou.png",
+      title: "回收方式",
+      body: "上门回收"
+    },
+    {
+      iconUrl: "/assets/icons/promise/jiage.png",
+      title: "价格公道",
+      body: "评估属实，绝不压价"
+    },
+    {
+      iconUrl: "/assets/icons/promise/kuaisu.png",
+      title: "快速打款",
+      body: "交易成功，立即打款"
+    },
+    ]
   },
 
   /**

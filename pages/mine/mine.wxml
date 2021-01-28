@@ -1,2 +1,26 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container-mine">
+  <image src="/assets/mine/mine_top.png" class="mine-top-background"></image>
+
+  <view class="mine-promise">
+    <view class="mine-promise-title">新基环保承诺</view>
+    <view class="mine-promise-container" wx:for="{{promiseList}}" wx:key="index">
+      <view class="item">
+        <image class="icon" src="{{item.iconUrl}}"></image>
+        <view class="icon-desc">
+          <view class="desc-title">{{item.title}}</view>
+          <view class="desc-body">{{item.body}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mine-asks-background">
+    <image src="/assets/mine/mine_asks.png" class="mine-asks-img"></image>
+    <view class="asks-container">
+      <view class="asks-title">在线咨询 > </view>
+      <view class="asks-body">维修手机、液晶电视、电脑主机、笔记本、洗衣机空调等电子家电产品。</view>
+    </view>
+  </view>
+
+</view>

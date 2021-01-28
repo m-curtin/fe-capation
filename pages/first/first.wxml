@@ -1,0 +1,77 @@
+<view class="container-first">
+  <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+    duration="{{duration}}">
+    <block wx:for="{{bannerBackgroundImg}}" wx:key="this">
+      <swiper-item>
+        <image class="swiper-img" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class="swiper-bottom-container" wx:for="{{swiperBottomList}}" wx:key="this">
+    <view class="swiper-bottom">
+      <image class="swiper-icon" src="/assets/first/icons/duihao.png"></image>
+      <text class="swiper-icon-desc">{{item}}</text>
+    </view>
+  </view>
+
+
+  <view class="tab-top-container" wx:for="{{tabTopImgList}}" wx:key="this">
+    <view class="tab-top">
+      <image class="tab-icon" src="{{item.img}}"></image>
+      <view class="tab-icon-desc">{{item.desc}}</view>
+    </view>
+  </view>
+
+  <swiper class="tab-top-swiper" indicator-active-color="#FF8B07" autoplay="{{false}}" indicator-color="#F2F2F2"
+    indicator-dots="true">
+    <swiper-item>
+      <view class="tab-top-container" wx:for="{{tabBottom1ImgList}}" wx:key="this">
+        <view class="tab-top">
+          <image class="tab-icon" src="{{item.img}}"></image>
+          <view class="tab-icon-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="tab-top-container" wx:for="{{tabBottom2ImgList}}" wx:key="this">
+        <view class="tab-top">
+          <image class="tab-icon" src="{{item.img}}"></image>
+          <view class="tab-icon-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <view class="doSthDesc">
+    <view class="doSthDesc-title">
+      <image class="doSthDesc-title-img" src="/assets/first/jieshao.png"></image>
+      <view class="doSthDesc-title-text">
+        <view class="top">上门服务 安全可靠</view>
+        <view class="bottom">在线沟通商议 提交位置约定时间</view>
+      </view>
+    </view>
+    <view class="doSthDesc-body">
+      手机平板笔记本电脑主机路由器户户通机子村村通机子EVD智能手表智能音箱智能摄像头键盘鼠标显示屏液晶电视冰箱冰柜洗衣机空调碟机打印机复印机录音机电话座机电动车充电器控制器空开变频器碟片CT片子医疗设备身份证阅读器电表气表交换机服务器各种电路板芯片板子工厂公司机构政府单位废料积压物品商家合作二手精选好用实惠。
+    </view>
+  </view>
+
+  <view class="has-perfect-sth">
+    <view class="has-perfect-title">兑换优品</view>
+    <image src="/assets/first/product1.png" class="product1"></image>
+    <view style="width: 346rpx;height: 320rpx;float: right; display:inline;">
+      <image src="/assets/first/product2.png" class="product2"></image><image src="/assets/first/product3.png" class="product3"></image>
+    </view>
+    <image src="/assets/first/product4.png" class="product4"></image>
+    <image src="/assets/first/product5.png" class="product5"></image>
+  </view>
+
+  <view class="bussiness-partner">
+    <view class="title">商家合作</view>
+  </view>
+
+  <view class="back-product">
+    <view class="title">回收产品</view>
+  </view>
+</view>
