@@ -1,4 +1,6 @@
 // pages/first/first.js
+const app = getApp();
+
 Page({
 
   /**
@@ -6,10 +8,10 @@ Page({
    */
   data: {
     bannerBackgroundImg: [
-      '/assets/first/banner/banner1.png', 
-      '/assets/first/banner/banner2.png', 
+      '/assets/first/banner/banner1.png',
+      '/assets/first/banner/banner2.png',
       '/assets/first/banner/banner3.png',
-      '/assets/first/banner/banner4.png', 
+      '/assets/first/banner/banner4.png',
     ],
     swiperBottomList: [
       '安全可靠',
@@ -17,8 +19,7 @@ Page({
       '上门服务',
       '坐等收款'
     ],
-    tabTopImgList: [
-      {
+    tabTopImgList: [{
         img: '/assets/first/icons/tabTop/1.png',
         desc: '家电回收'
       },
@@ -40,8 +41,7 @@ Page({
       },
     ],
 
-    tabBottom1ImgList: [
-      {
+    tabBottom1ImgList: [{
         img: '/assets/first/icons/tabBottom/tab1/1.png',
         desc: '碟机路由器回收'
       },
@@ -63,8 +63,7 @@ Page({
       },
     ],
 
-    tabBottom2ImgList: [
-      {
+    tabBottom2ImgList: [{
         img: '/assets/first/icons/tabBottom/tab2/1.png',
         desc: '办公品回收'
       },
@@ -85,8 +84,7 @@ Page({
         desc: '加盟回收'
       },
     ],
-    backProductList: [
-      {
+    backProductList: [{
         img: '/assets/first/back/back1.png',
         desc: '液晶电视32寸',
         price: '￥200'
@@ -102,11 +100,52 @@ Page({
         price: '￥200~1000'
       }
     ],
+    promiseList: [{
+        iconUrl: "/assets/icons/promise/anquan.png",
+        title: "安全问题",
+        body: "安全可靠"
+      },
+      {
+        iconUrl: "/assets/icons/promise/huishou.png",
+        title: "回收方式",
+        body: "上门回收"
+      },
+      {
+        iconUrl: "/assets/icons/promise/jiage.png",
+        title: "价格公道",
+        body: "评估属实，绝不压价"
+      },
+      {
+        iconUrl: "/assets/icons/promise/kuaisu.png",
+        title: "快速打款",
+        body: "交易成功，立即打款"
+      },
+    ],
+    perfectMap: {
+      onlineConsultUrl: '/assets/first/product5.png',
+      onlineMsg: '兑换多品类日常用品'
+    },
+    onlineConsultMap: {
+      onlineConsultUrl: '/assets/first/onlineConsult.png',
+      onlineMsg: '维修手机、液晶电视、电脑主机、笔记本、洗衣机空调等电子家电产品。'
+    },
     indicatorDots: true,
     vertical: false,
     autoplay: true,
     interval: 2000,
     duration: 500
+  },
+
+  goOnlineConsult: function () {
+    console.log(111);
+    console.log(app.globalData.userInfo)
+    if (app.globalData.userInfo) {
+
+    } else {
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    }
   },
 
   /**
@@ -128,6 +167,12 @@ Page({
    */
   onShow: function () {
 
+  },
+
+  // 回调事件
+  handleContact(e) {
+    console.log(e.path)
+    console.log(e.query)
   },
 
   /**

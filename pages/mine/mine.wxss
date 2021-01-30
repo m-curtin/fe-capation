@@ -1,4 +1,5 @@
-/* pages/mine/mine.wxss */
+@import '/template/environProtect/environProtect.wxss';
+@import '/template/onlineConsult/onlineConsult.wxss';
 
 .container-mine {
     width: 100%;
@@ -11,78 +12,43 @@
     height: 308rpx;
 }
 
-/* 新机环保承诺组件 */
-.mine-promise .mine-promise-title {
-    font-size: 36rpx;
-    text-align: left;
-    margin-left: 24rpx;
-    font-weight: 500;
-}
-
-.mine-promise .mine-promise-container {
-    display: inline-block;
-}
-
-.mine-promise .item {
+.userinfo {
     display: flex;
-    width: 375rpx;
-    height: 100rpx;
+    flex-direction: column;
     align-items: center;
 }
 
-.item .icon{
-    margin-left: 66rpx;
-    width: 42rpx;
-    height: 42rpx;
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
 }
 
-.item .icon-desc {
-    margin-left: 21rpx;
+.userinfo-nickname {
+    color: #aaa;
 }
 
-.icon-desc .desc-title {
-    margin-top: 30rpx;
-    font-size: 27rpx;
-    font-weight: 400;
-    color: #333;
+.usermotto {
+    margin-top: 200px;
 }
 
-.icon-desc .desc-body {
-    font-size: 23rpx;
-    color: #999;
+button {
+    background-color: rgb(247, 247, 247);
+    border-radius: 0rpx;
+    padding: 0rpx;
+    margin: 0rpx;
+    display: inline-block;
+    line-height: 1;
 }
 
-
-
-/* 在线咨询组件 */
-.container-mine .mine-asks-background {
-    position: relative;
-    width: 702rpx;
-    height: 186rpx;
-    margin: 0 auto;
+button::after {
+    /*button的边框样式是通过::after方式实现的*/
+    border: none;
 }
 
-.mine-asks-img {
-    width: 702rpx;
-    height: 186rpx;
-}
-
-.asks-title {
-    position: absolute;
-    font-size: 34rpx;
-    color: #333;
-    left: 74rpx;
-    top: 37rpx;
-}
-
-.asks-body {
-    position: absolute;
-    font-size: 24rpx;
-    float: left;
-    color: #666;
-    left: 74rpx;
-    bottom: 36rpx;
-    width: 486rpx;
-    height: 58rpx;
-    text-align: left;
+.button-hover {
+    /*点击后样式*/
+    color: #000;
+    background-color: rgb(247, 247, 247);
 }

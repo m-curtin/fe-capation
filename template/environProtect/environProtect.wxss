@@ -1,0 +1,42 @@
+/* 新机环保承诺组件 */
+.mine-promise .mine-promise-title {
+  font-size: 36rpx;
+  text-align: left;
+  margin-left: 24rpx;
+  font-weight: 500;
+}
+
+.mine-promise .mine-promise-container {
+  display: inline-block;
+}
+
+.mine-promise .item {
+  display: flex;
+  width: 375rpx;
+  height: 100rpx;
+  align-items: center;
+}
+
+.mine-promise .item .icon{
+  margin-left: 66rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.mine-promise .item .icon-desc {
+  margin-left: 21rpx;
+}
+
+.mine-promise .icon-desc .desc-title {
+  text-align: left;
+  margin-top: 30rpx;
+  font-size: 27rpx;
+  font-weight: 400;
+  color: #333;
+}
+
+.mine-promise .icon-desc .desc-body {
+  text-align: left;
+  font-size: 23rpx;
+  color: #999;
+}

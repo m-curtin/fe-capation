@@ -1,26 +1,28 @@
-<!--pages/mine/mine.wxml-->
-<view class="container-mine">
-  <image src="/assets/mine/mine_top.png" class="mine-top-background"></image>
+<!-- 引入模块 -->
+<import src="/template/environProtect/environProtect.wxml" />
+<import src="/template/onlineConsult/onlineConsult.wxml" />
 
-  <view class="mine-promise">
-    <view class="mine-promise-title">新基环保承诺</view>
-    <view class="mine-promise-container" wx:for="{{promiseList}}" wx:key="index">
-      <view class="item">
-        <image class="icon" src="{{item.iconUrl}}"></image>
-        <view class="icon-desc">
-          <view class="desc-title">{{item.title}}</view>
-          <view class="desc-body">{{item.body}}</view>
-        </view>
+<view class="container-mine">
+  <view style="position: relative;height: 408rpx;">
+    <image src="/assets/mine/mine_top.png" class="mine-top-background"></image>
+    <view style="display:inline-block;position:absolute;top:158rpx;left: 297rpx;">
+      <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录
+        </button>
+        <block wx:else>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
       </view>
     </view>
   </view>
+  <!-- environProtect模板 -->
+  <template is="environProtect" data="{{promiseList}}"></template>
 
-  <view class="mine-asks-background">
-    <image src="/assets/mine/mine_asks.png" class="mine-asks-img"></image>
-    <view class="asks-container">
-      <view class="asks-title">在线咨询 > </view>
-      <view class="asks-body">维修手机、液晶电视、电脑主机、笔记本、洗衣机空调等电子家电产品。</view>
-    </view>
-  </view>
+  <!-- onlineConsult -->
+  <label for="button">
+      <template is="onlineConsult" data="{{...onlineConsultMap}}"></template>
+  </label>
+  <button id="button" open-type="contact" bindcontact="handleContact"></button>
 
 </view>

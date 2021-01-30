@@ -1,6 +1,26 @@
+@import '/template/environProtect/environProtect.wxss';
+@import '/template/onlineConsult/onlineConsult.wxss';
+
 page {
   background-color: #F7F7F7;
   width: 100%;
+}
+
+button {
+  background-color: transparent;
+  /*按钮透明*/
+  border: none;
+}
+
+button::after {
+  /*button的边框样式是通过::after方式实现的*/
+  border: none;
+}
+
+.button-hover {
+  /*点击后样式*/
+  color: #000;
+  background-color: rgb(247, 247, 247);
 }
 
 .container-first {
@@ -80,7 +100,7 @@ page {
 
 .doSthDesc {
   display: inline-block;
-  width: 702rpx;
+  width: 647rpx;
   background-color: #FFFFFF;
   margin: 50rpx 52rpx 50rpx 52rpx;
   height: 380rpx;
@@ -133,6 +153,7 @@ page {
   font-size: 36rpx;
   text-align: left;
   font-weight: 500;
+  margin-bottom: 50rpx;
 }
 
 .has-perfect-sth .product1 {
@@ -159,6 +180,7 @@ page {
 }
 
 .has-perfect-sth .product4 {
+  margin-top: -4px;
   width: 702rpx;
   height: 206rpx;
 }
@@ -169,6 +191,7 @@ page {
 }
 
 .bussiness-partner {
+  margin-top: 80rpx;
   display: inline-block;
   width: 702rpx;
   height: 380rpx;
@@ -178,6 +201,7 @@ page {
   font-size: 36rpx;
   text-align: left;
   font-weight: 500;
+  margin-bottom: 50rpx;
 }
 
 .bussiness-partner .product1-container {
@@ -214,15 +238,17 @@ page {
 }
 
 .back-product {
+  margin-top: 80rpx;
   display: inline-block;
   width: 702rpx;
-  height: 1148rpx;
+  height: 1060rpx;
 }
 
 .back-product .title {
   font-size: 36rpx;
   text-align: left;
   font-weight: 500;
+  margin-bottom: 50rpx;
 }
 
 .back-product .tab-top {
@@ -265,16 +291,44 @@ page {
   font-size: 26rpx;
 }
 
-.tab-top button::after{ 
-	border: none; 
+.tab-top .nowCall::after {
+  border: none;
+  height: 48rpx;
 }
 
-.tab-top button {
+.tab-top .nowCall {
   width: 176rpx;
   height: 48rpx;
+  text-align: center;
   line-height: 48rpx;
   border-radius: 30px;
   font-size: 24rpx;
   background: #FF8B07;
   color: white;
+}
+
+.onlineConsult .mine-asks-background {
+  width: 750rpx;
+}
+
+
+.onlineConsult .mine-asks-img {
+  width: 750rpx;
+}
+
+.onlineConsultProduct .mine-asks-background {
+  width: 658rpx;
+}
+
+.onlineConsultProduct .mine-asks-img {
+  width: 658rpx;
+  height: 144rpx;
+}
+
+.fixOnlineImg {
+  position: fixed;
+  width: 145rpx;
+  height: 204rpx;
+  top: 700rpx;
+  right: 40rpx;
 }

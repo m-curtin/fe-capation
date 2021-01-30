@@ -1,0 +1,33 @@
+/* 在线咨询组件 */
+.mine-asks-background {
+  position: relative;
+  width: 702rpx;
+  height: 186rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.mine-asks-img {
+  width: 702rpx;
+  height: 186rpx;
+}
+
+.asks-container .asks-title {
+  position: absolute;
+  font-size: 34rpx;
+  color: #333;
+  left: 74rpx;
+  top: 37rpx;
+}
+
+.asks-container .asks-body {
+  position: absolute;
+  font-size: 24rpx;
+  float: left;
+  color: #666;
+  left: 74rpx;
+  bottom: 36rpx;
+  width: 486rpx;
+  height: 58rpx;
+  text-align: left;
+}

@@ -1,4 +1,8 @@
-<view class="container-first">
+<!-- 引入模块 -->
+<import src="/template/environProtect/environProtect.wxml" />
+<import src="/template/onlineConsult/onlineConsult.wxml" />
+
+<view class="container-first" bindtap="goOnlineConsult">
   <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
     duration="{{duration}}">
     <block wx:for="{{bannerBackgroundImg}}" wx:key="this">
@@ -9,40 +13,49 @@
   </swiper>
 
 
-  <view class="swiper-bottom-container" wx:for="{{swiperBottomList}}" wx:key="this">
-    <view class="swiper-bottom">
-      <image class="swiper-icon" src="/assets/first/icons/duihao.png"></image>
-      <text class="swiper-icon-desc">{{item}}</text>
-    </view>
-  </view>
-
-
-  <view class="tab-top-container" wx:for="{{tabTopImgList}}" wx:key="this">
-    <view class="tab-top">
-      <image class="tab-icon" src="{{item.img}}"></image>
-      <view class="tab-icon-desc">{{item.desc}}</view>
-    </view>
-  </view>
-
-  <swiper class="tab-top-swiper" indicator-active-color="#FF8B07" autoplay="{{false}}" indicator-color="#F2F2F2"
-    indicator-dots="true">
-    <swiper-item>
-      <view class="tab-top-container" wx:for="{{tabBottom1ImgList}}" wx:key="this">
-        <view class="tab-top">
-          <image class="tab-icon" src="{{item.img}}"></image>
-          <view class="tab-icon-desc">{{item.desc}}</view>
-        </view>
+  <label for="swiperbutton">
+    <view class="swiper-bottom-container" wx:for="{{swiperBottomList}}" wx:key="this">
+      <view class="swiper-bottom">
+        <image class="swiper-icon" src="/assets/first/icons/duihao.png"></image>
+        <text class="swiper-icon-desc">{{item}}</text>
       </view>
-    </swiper-item>
-    <swiper-item>
-      <view class="tab-top-container" wx:for="{{tabBottom2ImgList}}" wx:key="this">
-        <view class="tab-top">
-          <image class="tab-icon" src="{{item.img}}"></image>
-          <view class="tab-icon-desc">{{item.desc}}</view>
-        </view>
+    </view>
+  </label>
+  <button id="swiperbutton" open-type="contact" bindcontact="handleContact"></button>
+
+
+  <label for="tabtopbutton">
+    <view class="tab-top-container" wx:for="{{tabTopImgList}}" wx:key="this">
+      <view class="tab-top">
+        <image class="tab-icon" src="{{item.img}}"></image>
+        <view class="tab-icon-desc">{{item.desc}}</view>
       </view>
-    </swiper-item>
-  </swiper>
+    </view>
+  </label>
+  <button id="tabtopbutton" open-type="contact" bindcontact="handleContact"></button>
+
+  <label for="tab-top-swiperbutton">
+    <swiper class="tab-top-swiper" indicator-active-color="#FF8B07" autoplay="{{false}}" indicator-color="#F2F2F2"
+      indicator-dots="true">
+      <swiper-item>
+        <view class="tab-top-container" wx:for="{{tabBottom1ImgList}}" wx:key="this">
+          <view class="tab-top">
+            <image class="tab-icon" src="{{item.img}}"></image>
+            <view class="tab-icon-desc">{{item.desc}}</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="tab-top-container" wx:for="{{tabBottom2ImgList}}" wx:key="this">
+          <view class="tab-top">
+            <image class="tab-icon" src="{{item.img}}"></image>
+            <view class="tab-icon-desc">{{item.desc}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </label>
+  <button id="tab-top-swiperbutton" open-type="contact" bindcontact="handleContact"></button>
 
   <view class="doSthDesc">
     <view class="doSthDesc-title">
@@ -52,10 +65,10 @@
         <view class="bottom">在线沟通商议 提交位置约定时间</view>
       </view>
     </view>
-    <view class="doSthDesc-body">
+    <view class="doSthDesc-body" style="margin-top: 30rpx;">
       手机平板笔记本电脑主机路由器户户通机子村村通机子EVD智能手表智能音箱智能摄像头键盘鼠标显示屏液晶电视冰箱冰柜洗衣机空调碟机打印机复印机录音机电话座机电动车充电器控制器空开变频器碟片CT片子医疗设备身份证阅读器电表气表交换机服务器各种电路板芯片板子工厂公司机构政府单位废料积压物品商家合作二手精选好用实惠。
     </view>
-    <view class="doSthDesc-body">
+    <view class="doSthDesc-body" style="font-weight:500;color:#666;">
       电子家电通讯配件原器件：
     </view>
     <view class="doSthDesc-body">
@@ -63,37 +76,57 @@
     </view>
   </view>
 
+  <!-- environProtect模板 -->
+  <view style="margin:80rpx 0;">
+    <template is="environProtect" data="{{promiseList}}"></template>
+  </view>
+
   <view class="has-perfect-sth">
-    <view class="has-perfect-title">兑换优品</view>
-    <image src="/assets/first/product1.png" class="product1"></image>
-    <view style="width: 346rpx;height: 320rpx;float: right; display:inline;">
-      <image src="/assets/first/product2.png" class="product2"></image>
-      <image src="/assets/first/product3.png" class="product3"></image>
-    </view>
-    <image src="/assets/first/product4.png" class="product4"></image>
-    <image src="/assets/first/product5.png" class="product5"></image>
+    <label for="perfectbutton">
+      <view class="has-perfect-title">兑换优品</view>
+      <image src="/assets/first/product1.png" class="product1"></image>
+      <view style="width: 346rpx;height: 320rpx;float: right; display:inline;">
+        <image src="/assets/first/product2.png" class="product2"></image>
+        <image src="/assets/first/product3.png" class="product3"></image>
+      </view>
+      <image src="/assets/first/product4.png" class="product4"></image>
+      <!-- onlineConsult -->
+      <view class="onlineConsultProduct">
+        <template is="onlineConsult" data="{{...perfectMap}}" style="height: 148rpx;"></template>
+      </view>
+
+    </label>
+    <button id="perfectbutton" open-type="contact" bindcontact="handleContact"></button>
   </view>
 
   <view class="bussiness-partner">
     <view class="title">商家合作</view>
-    <view class="partner-container">
-      <view class="product1-container">
-        <image src="/assets/first/partner/part1.png" class="product1"></image>
-        <view>
-          <view class="product1-title">加盟回收合作</view>
-          <view class="product1-body">废品站和骑三轮车客户长期稳定上门回收价格优势现金交易</view>
+    <label for="partnerbutton">
+      <view class="partner-container">
+        <view class="product1-container">
+          <image src="/assets/first/partner/part1.png" class="product1"></image>
+          <view>
+            <view class="product1-title">加盟回收合作</view>
+            <view class="product1-body">废品站和骑三轮车客户长期稳定上门回收价格优势现金交易</view>
+          </view>
+        </view>
+        <view class="product1-container" style="margin-left: 23rpx;">
+          <image src="/assets/first/partner/part2.png" class="product1"></image>
+          <view class="product1-title" style="color: #806848;">代理赚取佣金</view>
+          <view class="product1-body" style="color: #806848;">代理合作获取用户订单公司上门回收根据成交额提取佣金</view>
         </view>
       </view>
-      <view class="product1-container" style="margin-left: 23rpx;">
-        <image src="/assets/first/partner/part2.png" class="product1"></image>
-        <view class="product1-title" style="color: #806848;">代理赚取佣金</view>
-        <view class="product1-body" style="color: #806848;">代理合作获取用户订单公司上门回收根据成交额提取佣金</view>
-      </view>
-    </view>
+    </label>
+    <button id="partnerbutton" open-type="contact" bindcontact="handleContact"></button>
   </view>
 
   <view class="back-product">
-    <view class="title">回收产品 二手产品</view>
+    <view class="title">
+      <text style="color:#999999;">回收产品</text>
+      <text style="display:inline-block;margin-left:58rpx;">
+        二<text style="border-bottom:3px solid #000;">手产</text>品
+      </text>
+    </view>
     <view wx:for="{{backProductList}}" style="display: inline-block; width: 336rpx;height: 422rpx;">
       <view class="tab-top">
         <image class="tab-icon" src="{{item.img}}"></image>
@@ -102,10 +135,26 @@
           <view class="name">回收价</view>
           <view class="price">{{item.price}}</view>
         </view>
-        <button>立即联系</button>
+        <button class="nowCall" open-type="contact" bindcontact="handleContact">立即联系</button>
       </view>
     </view>
-    <image style="display: inline-block; width: 336rpx;height: 422rpx;position: relative;margin-bottom: -110px;"
-      src="/assets/first/back/back4.png"></image>
+    <label for="fixOnlineImgbutton">
+      <image style="display: inline-block; width: 336rpx;height: 422rpx;position: relative;margin-bottom: -110px;"
+        src="/assets/first/back/back4.png"></image>
+    </label>
   </view>
+
+  <!-- onlineConsult模板 -->
+  <label for="fixOnlineImgbutton">
+    <view class="onlineConsult" style="margin-bottom:50rpx;">
+      <template is="onlineConsult" data="{{...onlineConsultMap}}"></template>
+    </view>
+  </label>
+
 </view>
+
+<!-- fix客服 -->
+<label for="fixOnlineImgbutton">
+  <image class="fixOnlineImg" src="/assets/first/fixImg.png"></image>
+</label>
+<button id="fixOnlineImgbutton" open-type="contact" bindcontact="handleContact"></button>

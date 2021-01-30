@@ -1,0 +1,9 @@
+<template name="onlineConsult">
+  <view class="mine-asks-background" >
+    <image src="{{onlineConsultUrl}}" class="mine-asks-img"></image>
+    <view class="asks-container">
+      <view class="asks-title">在线咨询 > </view>
+      <view class="asks-body">{{onlineMsg}}</view>
+    </view>
+  </view>
+</template>

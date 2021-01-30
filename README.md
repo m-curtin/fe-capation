@@ -1,9 +1,8 @@
 # fe-capation
 author: Curtin[ketingl@foxmail.com]
 
-Todo：
-1. 样式调整
-2. 增加点击跳转客服功能
+## V0.9
+开发完成，发布体验版，待测试。
 
 ## V0.2
 样式组件开发完成。

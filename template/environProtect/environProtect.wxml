@@ -1,0 +1,20 @@
+<!--
+  promiseList: array
+  iconUrl: string
+  title: string
+  body: string
+-->
+<template name="environProtect">
+  <view class="mine-promise">
+    <view class="mine-promise-title">新基环保承诺</view>
+    <view class="mine-promise-container" wx:for="{{promiseList}}" wx:key="index">
+      <view class="item">
+        <image class="icon" src="{{item.iconUrl}}"></image>
+        <view class="icon-desc">
+          <view class="desc-title">{{item.title}}</view>
+          <view class="desc-body">{{item.body}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
