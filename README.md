@@ -1,6 +1,9 @@
 # fe-capation
 author: Curtin[ketingl@foxmail.com]
 
+## 1.0
+修复iOS按钮样式问题；第一版完成，上线。
+
 ## V0.9
 开发完成，发布体验版，待测试。
 
