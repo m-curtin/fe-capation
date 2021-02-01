@@ -71,25 +71,15 @@ Page({
     }
   },
   getUserInfo(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
-  goOnlineConsult: function () {
-    console.log(111);
-    console.log(app.globalData.userInfo)
-    if (app.globalData.userInfo) {
-
-    } else {
-      wx.navigateTo({
-        url: '../login/login',
+    console.log(e);
+    if(!!e.detail.rawData) {
+      app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
       })
     }
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -2,7 +2,7 @@
 <import src="/template/environProtect/environProtect.wxml" />
 <import src="/template/onlineConsult/onlineConsult.wxml" />
 
-<view class="container-first" bindtap="goOnlineConsult">
+<view class="container-first">
   <swiper class="swiper-container" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
     duration="{{duration}}">
     <block wx:for="{{bannerBackgroundImg}}" wx:key="this">

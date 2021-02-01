@@ -136,18 +136,6 @@ Page({
     duration: 500
   },
 
-  goOnlineConsult: function () {
-    console.log(111);
-    console.log(app.globalData.userInfo)
-    if (app.globalData.userInfo) {
-
-    } else {
-      wx.navigateTo({
-        url: '../login/login',
-      })
-    }
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */

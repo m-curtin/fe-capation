@@ -5,7 +5,7 @@
 <view class="container-mine">
   <view style="position: relative;height: 408rpx;">
     <image src="/assets/mine/mine_top.png" class="mine-top-background"></image>
-    <view style="display:inline-block;position:absolute;top:158rpx;left: 297rpx;">
+    <view style="margin-top:-158rpx;">
       <view class="userinfo">
         <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录
         </button>
